@@ -1,0 +1,130 @@
+.all-divs {
+  display: grid;
+  grid-template-rows: 10vh 90vh 100vh 100vh 50vh 20vh;
+  grid-template-areas:
+    "."
+    "."
+    "."
+    "."
+    "."
+    ".";
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 3fr 2fr 5fr 2fr 2fr 2fr 2fr 3fr;
+  grid-template-areas: ". logo . menu menu menu contact .";
+  background: linear-gradient(#0d0c1f 75%, #100d4900);
+  align-items: center;
+  color: white;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  padding: 0 10px;
+}
+
+.logo {
+  text-align: left;
+  grid-area: logo;
+}
+
+.menu {
+  display: flex;
+  grid-area: menu;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contact {
+  text-align: right;
+  align-items: center;
+  grid-area: contact;
+}
+
+/* for firstpage */
+.content {
+  grid-area: content;
+}
+.idea {
+  grid-area: idea;
+  font-size: 80px;
+  letter-spacing: 2px;
+  font-family: "Alfa Slab One", sans-serif;
+}
+.policy {
+  grid-area: policy;
+  font-size: 30px;
+  font-family: "Inter", sans-serif;
+}
+.contact-fr {
+  grid-area: contact;
+}
+.first-page {
+  display: grid;
+  grid-row-end: auto;
+  grid-template-columns: 3fr 14.5fr 3fr;
+  grid-template-areas: ". content .";
+  align-items: center;
+}
+
+/* for second page */
+
+.second-page {
+  display: grid;
+  grid-template-columns: 3fr 14.5fr 3fr;
+  grid-template-areas: ". content . ";
+}
+
+/* for third page */
+
+.third-page {
+  display: grid;
+  grid-template-columns: 3fr 14.5fr 3fr;
+  grid-template-areas: ". content . ";
+}
+
+/* for fourth page */
+
+.fourth-page {
+  display: grid;
+  grid-template-columns: 3fr 14.5fr 3fr;
+  grid-template-areas: ". content . ";
+}
+
+/* for footer */
+
+.footer {
+  display: grid;
+  grid-template-columns: 3fr 14.5fr 3fr;
+  grid-template-areas: ". content .";
+}
+
+.foot-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: linear-gradient(rgba(255, 255, 255, 0), #100d49 80%);
+}
+
+/* Tablet View (768px and up) */
+@media (max-width: 768px) {
+  .nav {
+    grid-template-columns: 2fr 1fr 4fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-areas: ". logo . menu menu menu contact .";
+  }
+
+  .first-page {
+    grid-template-columns: 2fr 10fr 2fr;
+    grid-template-areas: ". content .";
+  }
+}
+
+/* Mobile View (480px and up) */
+@media (max-width: 480px) {
+  .nav {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "logo logo logo logo"
+      "menu menu contact contact";
+  }
+}
